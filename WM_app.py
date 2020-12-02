@@ -29,7 +29,7 @@ st.sidebar.title("""Sbghackathon""")
 st.sidebar.write('''Equipa : Weka_Masters\n
 Elementos:
 - João Chamorra
-- Tiago Mialha''')
+- Tiago Mealha''')
 
 #introdução
 st.header(''' Escolha o melhor portefólio de produtos do grupo SuperBock para um determinado cliente (Desafio 3)''')
