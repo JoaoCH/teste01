@@ -54,10 +54,9 @@ thes = st.slider("Classification Probability Threshold",0.0,1.0,0.7,0.1)
 
 if st.button('Inferir'):
 	caminho = 'https://onedrive.live.com/view.aspx?resid=C4788864AF265DE6!894719&authkey=!ACz8UQE1qsxb2HA'
-	import base64
-    data_bytes64 = base64.b64encode(bytes(caminho, 'utf-8'))
-    data_bytes64_String = data_bytes64.decode('utf-8').replace('/','_').replace('+','-').rstrip("=")
-    resultUrl = f"https://api.onedrive.com/v1.0/shares/u!{data_bytes64_String}/root/content"
+    	data_bytes64 = base64.b64encode(bytes(caminho, 'utf-8'))
+    	data_bytes64_String = data_bytes64.decode('utf-8').replace('/','_').replace('+','-').rstrip("=")
+    	resultUrl = f"https://api.onedrive.com/v1.0/shares/u!{data_bytes64_String}/root/content"
 	st.write(resultUrl)
 	#df_load_modelo = pd.read_csv('modelo.csv')
 	df_load_modelo = pd.read_csv(resultUrl)
