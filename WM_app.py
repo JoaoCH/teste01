@@ -57,7 +57,7 @@ if st.button('Inferir'):
 	data_bytes64 = base64.b64encode(bytes(caminho, 'utf-8'))
 	data_bytes64_String = data_bytes64.decode('utf-8').replace('/','_').replace('+','-').rstrip("=")
 	resultUrl = f"https://api.onedrive.com/v1.0/shares/u!{data_bytes64_String}/root/content"
-	st.write(resultUrl)
+	#st.write(resultUrl)
 	#df_load_modelo = pd.read_csv('modelo.csv')
 	df_load_modelo = pd.read_csv(resultUrl)
 
