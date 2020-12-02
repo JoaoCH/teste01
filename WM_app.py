@@ -50,7 +50,7 @@ val_reg = st.selectbox("Região", list(range(len(regiao))), format_func=lambda x
 val_local = st.selectbox("Localidade", list(range(len(localidades))), format_func=lambda x: localidades[x])
 val_seg = st.selectbox("Segmentação", list(range(len(seg))), format_func=lambda x: seg[x])
 
-thes = st.slider("Classification Probability Threshold",0.0,1.0,0.7,0.1)
+thes = st.slider("Classification Probability Threshold",0.0,1.0,0.7,0.05)
 
 if st.button('Inferir'):
 	caminho = 'https://1drv.ms/u/s!AuZdJq9kiHjEts1_LPxRATWqzFvYcA?e=hmZjlg'
